@@ -31,6 +31,23 @@ function NguoiDungServices(){
             console.log(err);
         })
     }
+    this.layViTriNguoiDung = function(taiKhoan){
+        var viTri;
+        var danhSachNguoiDung = JSON.parse(localStorage.getItem("danhSachNguoiDung"));
+        danhSachNguoiDung.map(function(item, index){
+            if(item.TaiKhoan === taiKhoan){
+                return index;
+            }
+        })
+        return viTri;
+    }
+
+    this.layThongTinNguoiDung = function(taiKhoan){
+        var danhSachNguoiDung = JSON.parse(localStorage.getItem("danhSachNguoiDung"));
+        danhSachNguoiDung.find(function(item){
+            return item.TaiKhoan === taiKhoan;
+        })
+    }
     this.xoaNguoiDung = function(taiKhoan){
         $.ajax({
             url: `http://svcy.myclass.vn/api/QuanLyTrungTam/XoaNguoiDung/${taiKhoan}`,
