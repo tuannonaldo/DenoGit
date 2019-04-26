@@ -1,5 +1,8 @@
 $(document).ready(function(){
     var nguoiDungServices = new NguoiDungServices();
+    function moiTaoBranch(){
+        
+    }
 
     layDanhSachNguoiDung();
 
@@ -86,7 +89,7 @@ function taoBang(danhSachNguoiDung){
                  <td>${item.SoDT}</td>
                  <td>${item.TenLoaiNguoiDung}</td>
                  <td>
-                     <button  class="btn btn-success btnSua" data-toggle="modal" data-target="#myModal" data-taikhoan="hello">Sửa</button>
+                     <button  class="btn btn-success btnSua" data-taikhoan="${item.TaiKhoan}">Sửa</button>
                      <button  class="btn btn-danger btnXoa" data-taikhoan="${item.TaiKhoan}">Xóa</button>
                  </td>
              </tr>
