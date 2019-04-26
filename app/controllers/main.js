@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var nguoiDungServices = new NguoiDungServices();
     function moiTaoBranch(){
-        
+        console.log(moiTaoBranch);
     }
 
     layDanhSachNguoiDung();
